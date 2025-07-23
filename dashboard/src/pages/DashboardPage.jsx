@@ -29,7 +29,7 @@ export default function DashboardPage({ user }) {
 
   const fetchLogs = async () => {
     try {
-      const res = await fetch("/api/logs", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/logs`, {
         credentials: "include",
       });
       const data = await res.json();
@@ -71,7 +71,7 @@ async function clearLogs() {
   if (!confirmed) return;
 
   try {
-    const res = await fetch("/api/logs/clear", {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/logs/clear`, {
       method: "DELETE",
       credentials: "include" 
     });

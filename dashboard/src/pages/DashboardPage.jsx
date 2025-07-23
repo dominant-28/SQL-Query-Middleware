@@ -33,6 +33,11 @@ export default function DashboardPage({ user }) {
         credentials: "include",
       });
       const data = await res.json();
+      if (!Array.isArray(data)) {
+      console.warn("Backend /api/logs did not return an array:", data);
+      setLogs([]); // fallback to empty logs
+      return;
+    }
       setLogs(data);
 
       const total = data.length;

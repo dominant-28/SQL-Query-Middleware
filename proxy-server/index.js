@@ -1,4 +1,6 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
+
 const auth = require("./auth");
 const cookieParser = require("cookie-parser");
 const express = require("express");

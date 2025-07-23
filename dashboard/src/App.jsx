@@ -18,44 +18,45 @@ export default function App() {
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    fetch("/api/me", { 
-      credentials: "include",
-      
+ useEffect(() => {
+  fetch(`${import.meta.env.VITE_API_URL}/api/me`, {
+    credentials: "include",
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Not authenticated");
+      return res.json();
     })
-      .then((res) => {
-        if (!res.ok) throw new Error("Not authenticated");
-        return res.json();
-      })
-      .then((data) => {
-        setUser(data.user);
-    
-        return fetch("/api/get-config", { credentials: "include" });
-      })
-      .then((res) => res.json())
-      .then((configData) => {
-        if (configData.DB_HOST) {
-          setConfig(configData);
-          setCurrentPage("dashboard");
-        } else {
-          setCurrentPage("setup");
-        }
-      })
-      .catch(() => {
-        setUser(null);
-        setCurrentPage("login");
-      })
-      .finally(() => {
-        setLoading(false);
+    .then((data) => {
+      setUser(data.user);
+      return fetch(`${import.meta.env.VITE_API_URL}/api/get-config`, {
+        credentials: "include",
       });
-  }, []);
+    })
+    .then((res) => res.json())
+    .then((configData) => {
+      if (configData.DB_HOST) {
+        setConfig(configData);
+        setCurrentPage("dashboard");
+      } else {
+        setCurrentPage("setup");
+      }
+    })
+    .catch(() => {
+      setUser(null);
+      setCurrentPage("login");
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+}, []);
+
 
   const handleLogout = async () => {
     try {
-      await fetch("/api/logout", {
-        method: "POST",
-        credentials: "include",
-      });
+     await fetch(`${import.meta.env.VITE_API_URL}/api/logout`, {
+  method: "POST",
+  credentials: "include",
+});
       setUser(null);
       setConfig(null);
       setCurrentPage("login");
@@ -70,13 +71,13 @@ export default function App() {
     setCopied(false);
     setError("");
     try {
-      const res = await fetch("/api/generate-apikey", {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+     await fetch(`${import.meta.env.VITE_API_URL}/api/generate-apikey`, {
+  method: "POST",
+  credentials: "include",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
       if (!res.ok) throw new Error("Failed to generate API key");
       const data = await res.json();
       setApiKey(data.api_key);

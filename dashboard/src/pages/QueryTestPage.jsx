@@ -13,7 +13,7 @@ export default function QueryTestPage({ user }) {
     setResult(null);
 
     try {
-      const res = await fetch("/api/query", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/query`, {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

@@ -1,5 +1,6 @@
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 dotenv.config();
+
 
 const auth = require("./auth");
 const cookieParser = require("cookie-parser");

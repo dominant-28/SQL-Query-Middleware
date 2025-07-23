@@ -23,7 +23,7 @@ export default function Setuppage({ onConfigSaved }) {
     setTestResult(null);
 
     try {
-      const res = await fetch("/api/test-connection", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/test-connection`, {
         method: "GET",
         credentials: "include",
       });
@@ -50,7 +50,7 @@ export default function Setuppage({ onConfigSaved }) {
     setMessage("Saving configuration...");
 
     try {
-      const res = await fetch("/api/save-config", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/save-config`, {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

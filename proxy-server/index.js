@@ -23,13 +23,7 @@ app.use(
     credentials: true 
   })
 );
-app.options("*", cors({
-  origin: [
-    "https://smart-query-proxy.vercel.app",
-    "http://localhost:5173"
-  ],
-  credentials: true
-}));
+
 async function createUserPool(userId, config) {
   try {
     const pool = mysql.createPool({

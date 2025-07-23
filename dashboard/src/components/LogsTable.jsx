@@ -69,30 +69,32 @@ export default function LogsTable({ logs }) {
               </td>
               <td className={`px-6 py-4 ${getSeverityColor(log.feedback)}`}>
                 <div className="prose max-w-xs break-words">
-                  <ReactMarkdown
-                    components={{
-                      code({ node, inline, className, children, ...props }) {
-                        return (
-                          <code className="whitespace-pre-wrap break-words">{children}</code>
-                        );
-                      },
-                    }}
-                  >
-                    {(() => {
-                      const feedback = JSON.parse(JSON.stringify(log.feedback));
-                      const ai = feedback.find((f) => f.type === "ai_analysis");
-                      if (ai) return ai.message;
+                 <ReactMarkdown
+  components={{
+    code({ node, inline, className, children, ...props }) {
+      return (
+        <code className="whitespace-pre-wrap break-words">{children}</code>
+      );
+    },
+  }}
+>
+  {(() => {
+    const feedback = Array.isArray(log.feedback) ? log.feedback : [];
 
-                      const fallback = feedback
-                        .filter(
-                          (f) => f.type === "optimization" || f.type === "success"
-                        )
-                        .map((f) => f.message)
-                        .join("\n\n");
+    const ai = feedback.find((f) => f.type === "ai_analysis");
+    if (ai) return ai.message;
 
-                      return fallback || "No feedback";
-                    })()}
-                  </ReactMarkdown>
+    const fallback = feedback
+      .filter(
+        (f) => f.type === "optimization" || f.type === "success"
+      )
+      .map((f) => f.message)
+      .join("\n\n");
+
+    return fallback || "No feedback";
+  })()}
+</ReactMarkdown>
+
                 </div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-gray-300">

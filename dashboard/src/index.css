@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+.prose code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}

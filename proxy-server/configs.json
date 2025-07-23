@@ -1,0 +1,107 @@
+{
+  "7a9336ee-3e6b-40f4-a6e1-7423db6640dc": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "d84d8d59-5030-4137-a835-eeb20f29fea8": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "5969e47f-0aab-4837-88ff-8a2b5b11641a": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "2066ee61-cd9d-4676-9465-8fcfc8b0c437": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "82e2491f-7595-4f1a-8350-a253d705f806": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "58a7754f-b218-4375-8d3f-b07b89b8900e": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "cf1ddb51-5555-4121-83c8-ae484bce0ae3": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "cccf65c0-ece2-4d1e-8627-baa56817304b": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "879e5058-09e1-424c-a395-1ee668725b51": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "12f0bfaf-e390-4ed6-a3ea-182887440843": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "702b8e2a-2bba-4bed-b326-53f930749255": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "c944ac85-dde2-4fec-a0d7-0d78e1952911": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "6cd571b5-4bb4-4cc6-876e-e1eff2e4d810": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "013d680d-4b0e-4d81-a319-37adace85ef6": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  },
+  "e5648ee4-4828-4b51-8728-514b6aaf283c": {
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_USER": "root",
+    "DB_PASS": "soham9114",
+    "DB_NAME": "app_db"
+  }
+}

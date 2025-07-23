@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config();
-
+const cors = require("cors");
 
 const auth = require("./auth");
 const cookieParser = require("cookie-parser");
@@ -14,7 +14,15 @@ const { v4: uuidv4 } = require("uuid");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-
+app.use(
+  cors({
+    origin: [
+  "https://smart-query-proxy.vercel.app",
+  "http://localhost:5173" 
+],
+    credentials: true 
+  })
+);
 async function createUserPool(userId, config) {
   try {
     const pool = mysql.createPool({
@@ -366,7 +374,7 @@ app.post("/api/query", auth.verifyAuth, async (req, res) => {
 async function analyzeQuery(sql, executionTime, userId, error, affectedRows, explanation) {
   try {
     const mlResponse = await axios.post(
-      "http://localhost:5000/check",
+      process.env.MICRO_URL,
       {
         sql,
         exec_time_ms: executionTime,

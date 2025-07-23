@@ -376,7 +376,7 @@ app.post("/api/query", auth.verifyAuth, async (req, res) => {
 async function analyzeQuery(sql, executionTime, userId, error, affectedRows, explanation) {
   try {
     const mlResponse = await axios.post(
-      process.env.MICRO_URL,
+      `${process.env.MICRO_URL}/check`,
       {
         sql,
         exec_time_ms: executionTime,

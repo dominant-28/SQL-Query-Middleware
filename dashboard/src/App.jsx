@@ -71,7 +71,7 @@ export default function App() {
     setCopied(false);
     setError("");
     try {
-     await fetch(`${import.meta.env.VITE_API_URL}/api/generate-apikey`, {
+    const res =  await fetch(`${import.meta.env.VITE_API_URL}/api/generate-apikey`, {
   method: "POST",
   credentials: "include",
   headers: {

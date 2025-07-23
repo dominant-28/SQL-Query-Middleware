@@ -13,7 +13,7 @@ export default function LoginPage({ onLoginSuccess }) {
     setError("");
     setLoading(true);
 
-    const endpoint = isRegister ? "/api/register" : "/api/login";
+    const endpoint = isRegister ? `${import.meta.env.VITE_API_URL}/api/register` : `${import.meta.env.VITE_API_URL}/api/login`;
 
     const payload = isRegister
       ? { username, email, password }

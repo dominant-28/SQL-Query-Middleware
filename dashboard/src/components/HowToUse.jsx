@@ -62,7 +62,7 @@ export default function HowToUse() {
 
 const sql = "SELECT * FROM users WHERE id = 1";
 
-axios.post("www.proxy/api/query",
+axios.post("https://smart-query-proxy-backend.onrender.com/api/query",
   { sql },
   {
     headers: {

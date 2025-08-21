@@ -1,4 +1,4 @@
-# 🚀 Smart_Query_Proxy
+# Smart_Query_Proxy
 
 **Smart_Query_Proxy** is a **full-stack developer tool** that acts as a **secure middleware proxy** between your application and your **MySQL** database.
 
@@ -6,7 +6,7 @@ It helps developers **analyze, monitor, and optimize SQL queries in real-time** 
 
 ---
 
-## ⚙️ How it Works
+## How it Works
 
 - **Connect Your Database:**  
   Provide your DB configuration. The app connects securely on your behalf.
@@ -27,7 +27,7 @@ It helps developers **analyze, monitor, and optimize SQL queries in real-time** 
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-------------|
@@ -40,7 +40,7 @@ It helps developers **analyze, monitor, and optimize SQL queries in real-time** 
 
 ---
 
-## 🧑‍💻 Features
+## Features
 
 ✅ **Secure user authentication**  
 ✅ **Per-user DB configuration**  
@@ -53,7 +53,7 @@ It helps developers **analyze, monitor, and optimize SQL queries in real-time** 
 
 ---
 
-## 📊 Example Use Case
+## Example Use Case
 
 - **Connect Local or Remote MySQL**  
   Save connection settings once.
@@ -66,14 +66,14 @@ It helps developers **analyze, monitor, and optimize SQL queries in real-time** 
 
 ---
 
-## 🌐 Deployed URLs
+## Deployed URLs
 
 - **Frontend (React)** → [Smart Query Proxy UI](https://smart-query-proxy.vercel.app)
 
 
 ---
 
-## 🔐 Security
+## Security
 
 - **JWT & Cookies** for auth  
 - **MongoDB** for secure user & config storage  
@@ -81,7 +81,7 @@ It helps developers **analyze, monitor, and optimize SQL queries in real-time** 
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 - **Frontend:** Hosted on **Vercel**
 - **Backend & Flask:** Hosted on **Render**
